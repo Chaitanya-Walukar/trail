@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title = "Conditional Rendering">
+        <lightning-input type ="Checkbox" label="Show div Tag" onchange={showDivHandler}> </lightning-input>
+        <template if:true ={displayDiv}>
+              <div> Its true</div>
+               
+        </template>
+        <template if:false = {displayDiv}>
+        <div> Its False</div>
+        </template>
+    </lightning-card>
+
+    //for each iteration 
+
+    <lightning-card title = "for:each">
+        <template for:each={cityList} for:item="city">
+            <p key = {city}> {city} </p>
+        </template>
+    </lightning-card>
+
+    <lightning-card title = "Iterator">
+        <template iterator:it={cityList}>
+            <p key={it.value}> {it.value} </p> 
+        </template>
+    </lightning-card>
+</template>
