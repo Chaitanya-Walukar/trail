@@ -4,6 +4,7 @@ trigger Test on  Contact (before insert) {
         if(con.get(con.id).active__c  == true && con.get(con.id).AccountId != null){
             newContactsMap.put(con);
             system.debug('Rajubhau'); 
+             system.debug('Rajubhau'); 
              
         }
     }
